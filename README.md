@@ -40,6 +40,8 @@ For this project, different learning rate is being used to train the model. A le
 
 The final test accuracy for 4000 iterations is about 74.6%.
 
+
 # Testing the product
+
 Most dog breeds within the trained categories can be classified correctly. However, some breeds are constantly misclassified, such as the bull terrier.
 
