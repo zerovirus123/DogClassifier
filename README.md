@@ -50,7 +50,16 @@ Running TensorBoard allows the training/validation accuracy and cross entropy to
 
 Validation cross entropy remains high even after 4000 iterations, suggesting that the model is overfitting.
 
+The TensorBoard summary for TensorFlow for Poets 2 tutorial has a validation accuracy of above 0.8 and a validation cross entropy of below 0.4. Wth all else being the same, this indicates that the problem lies in the dog classifier's dataset.
+
 # Testing the product
 
-Most dog breeds within the trained categories can be classified correctly. However, some breeds are consistently misclassified, such as the bull terrier.
+Most dog breeds within the trained categories can be classified correctly. However, some breeds, such as the bull terrier, are constantly misclassified.
+
+# Final Note
+
+Transfer learning is a useful tool for reusing pre-existing deep learning models and applying it to a new task. 
+However, this is no substitute for a good dataset, which is critical for training a good model.
+
+Using a well established deep learning model as a benchmark, the quality of the dataset can be accessed.
 
