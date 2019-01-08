@@ -20,7 +20,7 @@
         android:layout_width="269dp"
         android:layout_height="128dp"
         android:ems="10"
-        android:textSize="60dp"
+        android:textSize="60sp"
         android:textColor="#2c332c"
         android:fontFamily="@font/australian_script"
         android:inputType="textPersonName"
@@ -44,7 +44,7 @@
         android:layout_gravity="center"
         android:text="By: Brian Sia"
         android:textColor="#2c332c"
-        android:textSize="40dp"
+        android:textSize="40sp"
     />
 
     </FrameLayout>
@@ -55,7 +55,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="©2018"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:textColor="#2c332c"
         android:textStyle="bold"
         android:gravity="center_horizontal"
