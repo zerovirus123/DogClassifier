@@ -48,8 +48,9 @@ Running TensorBoard allows the training/validation accuracy and cross entropy to
 
 <img width="962" alt="screen shot 2019-01-08 at 3 09 57 pm" src="https://user-images.githubusercontent.com/9401015/50815550-7dcac000-1358-11e9-9b87-77f052d7b38c.png">
 
+Validation cross entropy remains high even after 4000 iterations, suggesting that the model is overfitting.
 
 # Testing the product
 
-Most dog breeds within the trained categories can be classified correctly. However, some breeds are constantly misclassified, such as the bull terrier.
+Most dog breeds within the trained categories can be classified correctly. However, some breeds are consistently misclassified, such as the bull terrier.
 
