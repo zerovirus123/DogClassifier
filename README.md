@@ -1,20 +1,45 @@
 # Overview
 
-This repo contains code for the "TensorFlow for poets 2" series of codelabs.
+Real time dog breed classification using transfer learning from a pre-trained MobileNet convolutional neural network model.  
 
-There are multiple versions of this codelab depending on which version 
-of the tensorflow libraries you plan on using:
+# What is transfer learning?
 
-* For [TensorFlow Lite](https://www.tensorflow.org/mobile/tflite/) the new, ground up rewrite targeted at mobile devices
-  use [this version of the codelab](https://codelabs.developers.google.com/codelabs/tensorflow-for-poets-2-tflite) 
-* For the more mature [TensorFlow Mobile](https://www.tensorflow.org/mobile/mobile_intro) use 
-  [this version of the codealab](https://codelabs.developers.google.com/codelabs/tensorflow-for-poets-2).
+Transfer learning is a machine learning method where a model developed for a task is reused as the starting point for a model on a second task.
 
+Deep learning models often take days or weeks to train, even on modern hardware. Therefore, if a pre-trained model can be reused for similar tasks, it would save developers a lot of time.
 
-This repo contains simplified and trimmed down version of tensorflow's example image classification apps.
+Below are the steps for using a pre-trained model for transfer learning.
 
-* The TensorFlow Lite version, in `android/tflite`, comes from [tensorflow/contrib/lite/](https://github.com/tensorflow/tensorflow/tree/master/tensorflow/contrib/lite).
-* The Tensorflow Mobile version, in `android/tfmobile`, comes from [tensorflow/examples/android/](https://github.com/tensorflow/tensorflow/tree/master/tensorflow/examples/android).
+1.) **Select Source Model**. A pre-trained source model is chosen from available models. Many research institutions release models on large and challenging datasets that may be included in the pool of candidate models from which to choose from.
 
-The `scripts` directory contains helpers for the codelab. Some of these come from the main TensorFlow repository, and are included here so you can use them without also downloading the main TensorFlow repo (they are not part of the TensorFlow `pip` installation).
+2.) **Reuse Model**. The model pre-trained model can then be used as the starting point for a model on the second task of interest. This may involve using all or parts of the model, depending on the modeling technique used.
+
+3.) **Tune Model**. Optionally, the model may need to be adapted or refined on the input-output pair data available for the task of interest.
+
+# Collecting the data
+
+Dog images are downloaded from using Google Images Download, a Python image scraping script that downloads images based on keywords. More information can be found on https://github.com/hardikvasa/google-images-download.
+
+Sometimes, datasets irrevelant to the problem will be downloaded. For example, the keyword 'boxer' may return images of the combat sport instead of the dog breed. It is important to filter out these datas.
+
+For this project, 50 dog breeds are used for this classification tasks. 
+
+# Training the data
+
+A pre-trained MobileNet_1_224 model is used to train the final layer. The first number refers to the relative size of model compared to the largest MobileNet(1, 0.75, 0.5, 0.25). The second number refers to the input image resolution (128, 160, 192, 224). This configuration produces the most accurate model, but also takes the longest to train. 
+
+Scripts for re-training the final layer can be found at https://codelabs.developers.google.com/codelabs/tensorflow-for-poets/#0. The link provides a guide to retraining TensorFlow models.
+
+# Fine tuning training parameters
+
+Tweaking the parameters can often squeeze in a few more percent to the final accuracy. Some examples of the parameters include learning rate, regularization, mini-batch size and more. 
+
+For this project, different learning rate is being used to train the model. A learning rate of 0.05 yields the optimal accuracy. Decreasing the learning rate would only prolong the training time, or even cause the gradient descent to fail to converge.
+
+# Final Result
+
+The final test accuracy for 4000 iterations is about 74.6%.
+
+# Testing the product
+Most dog breeds within the trained categories can be classified correctly. However, some breeds are constantly misclassified, such as the bull terrier.
 
