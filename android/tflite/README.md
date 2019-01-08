@@ -25,12 +25,12 @@
 
   ```shell
   bazel build -c opt --cxxopt='--std=c++11' \
-    //tensorflow/contrib/lite/java/demo/app/src/main:TfLiteCameraDemo
+    //tensorflow/contrib/lite/java/demo/app/src/main:DogClassifier
   ```
 
 3. Install the demo on a
    [debug-enabled device](https://github.com/tensorflow/tensorflow/tree/master/tensorflow/examples/android#install):
 
   ```shell
-  adb install bazel-bin/tensorflow/contrib/lite/java/demo/app/src/main/TfLiteCameraDemo.apk
+  adb install bazel-bin/tensorflow/contrib/lite/java/demo/app/src/main/DogClassifier.apk
   ```

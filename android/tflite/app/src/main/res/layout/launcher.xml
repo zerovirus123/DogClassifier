@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="422dp"
+        android:layout_height="759dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/white_dog"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp"
+    />
+
+    <TextView
+        android:id="@+id/Title"
+        android:layout_width="269dp"
+        android:layout_height="128dp"
+        android:ems="10"
+        android:textSize="60dp"
+        android:textColor="#2c332c"
+        android:fontFamily="@font/australian_script"
+        android:inputType="textPersonName"
+        android:text="RealTime Dog Classifier"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:textStyle="bold"
+    />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="By: Brian Sia"
+        android:textColor="#2c332c"
+        android:textSize="40dp"
+    />
+
+    </FrameLayout>
+
+
+    <TextView
+        android:id="@+id/Copyright"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="©2018"
+        android:textSize="20dp"
+        android:textColor="#2c332c"
+        android:textStyle="bold"
+        android:gravity="center_horizontal"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+    />
+
+</RelativeLayout>
