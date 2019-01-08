@@ -40,6 +40,8 @@ For this project, different learning rate is being used to train the model. A le
 
 The final test accuracy for 4000 iterations is about 74.6%.
 
+<img width="564" alt="screen shot 2019-01-08 at 2 41 35 pm" src="https://user-images.githubusercontent.com/9401015/50814878-19a6fc80-1356-11e9-8eb9-e1f55e46179e.png">
+
 
 # Testing the product
 
